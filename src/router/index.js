@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import pmLogin from '../components/login'
+import admin from '../components/admin/home'
+
 //通过Vue的use方法注入Router
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
     // 指定路由选中时的样式类名
@@ -18,6 +20,10 @@ const router = new Router({
     {
         path: '/login',
         component: pmLogin
+    },
+    {
+        path: '/admin',
+        component: admin
     }
 ]
 })
