@@ -4,7 +4,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import pmLogin from '../components/login'
 import admin from '../components/admin/home'
-
+import userManager from '../components/user/user'
 //通过Vue的use方法注入Router
 Vue.use(Router);
 
@@ -23,7 +23,10 @@ const router = new Router({
     },
     {
         path: '/admin',
-        component: admin
+        component: admin,
+        children: [
+            { path: '/user', component: userManager}
+        ]
     }
 ]
 })

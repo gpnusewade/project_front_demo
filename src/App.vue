@@ -1,14 +1,18 @@
 <template>
   <div id="app">
+    <pm-header></pm-header>
     <router-view to="/login"></router-view>
   </div>
 </template>
 
 <script>
+import pmHeader from './components/base/header';
 
 export default {
   name: 'app',
-  components: {}
+  components: {
+    pmHeader
+  }
 }
 </script>
 
